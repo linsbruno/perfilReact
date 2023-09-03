@@ -1,7 +1,10 @@
+import Perfil from "./components/Perfil";
+
+
 function App() {
   return (
     <>
-      <h1>.</h1>
+      <Perfil nome="Bruno Lins" avatar="https://github.com/linsbruno.png"/>
     </>
   )
 }
