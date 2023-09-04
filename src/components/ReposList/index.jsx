@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import styles from './ReposList.module.css';
 
 const ReposList =() => {
     const [repos, setRepos] =useState([]);
@@ -13,16 +14,22 @@ const ReposList =() => {
     },[]);
 
     return (
-        <ul>
+        <div className="container">
+            <ul className={styles.list}>
             {repos.map( ({id, name, language, html_url})=> (
-                <li key={id}>
+                <li className={styles.listItem} key={id}>
+                    <div className={styles.itemName}>
                     <b>Nome:</b> {name} <br />
-                    <b>Linguagem:</b> {language}<br />
-                    <a target="_blank" href={html_url}>Visitar no Guithub</a><br /><hr />
+                    </div>
+                    <div className={styles.itemLanguage}>
+                        <b>Linguagem:</b> {language}
+                    </div>
+                    <a className={styles.itemLink} target="_blank" href={html_url}>Visitar no Guithub</a>
                 </li>
             ))}
             
         </ul>
+        </div>
     )
 }
 
