@@ -13,14 +13,14 @@ const Formulario = () => {
         if ( media >= 7) {
             return (
                 <p>
-                    Olá {nome} você foi aprovado
+                    Olá {nome}, sua média é {media.toFixed(1)} e você foi aprovado
                 </p>
                 )
             }
             else {
                 return (
                     <p>
-                        Olá  {nome} você não foi aprovado
+                        Olá  {nome}, sua média é {media.toFixed(1)} e  você não foi aprovado
                     </p>
                 )
             }
